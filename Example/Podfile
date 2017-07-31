@@ -1,0 +1,19 @@
+# Deployment Target
+platform :ios, '8.0'
+
+# Add pods as frameworks so we could add obj-c and swift 3.0 pods
+use_frameworks!
+
+
+target 'Animators_Example' do
+    pod 'Animators', :path => '../'
+
+    target 'Animators_Tests' do
+        inherit! :search_paths
+
+        pod 'Quick'
+        pod 'Nimble'
+        pod 'FBSnapshotTestCase'
+        pod 'Nimble-Snapshots'
+    end
+end
