@@ -15,6 +15,13 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		713FD80FAC9943AACD5AA3C4 /* Pods_Animators_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A57EF199062A6288B6F40BC /* Pods_Animators_Example.framework */; };
 		83F7EC1443311D24D6516A96 /* Pods_Animators_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379E02F41C91C27470FC5D5F /* Pods_Animators_Tests.framework */; };
+		B06FD0641F2F610300FB968F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FD0621F2F610300FB968F /* MainViewController.swift */; };
+		B06FD0921F2F8B5200FB968F /* bottomSlideNavigation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B06FD08C1F2F8B5200FB968F /* bottomSlideNavigation.gif */; };
+		B06FD0931F2F8B5200FB968F /* bottomSlidePresentation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B06FD08D1F2F8B5200FB968F /* bottomSlidePresentation.gif */; };
+		B06FD0941F2F8B5200FB968F /* fadeNavigation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B06FD08E1F2F8B5200FB968F /* fadeNavigation.gif */; };
+		B06FD0951F2F8B5200FB968F /* fadePresentation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B06FD08F1F2F8B5200FB968F /* fadePresentation.gif */; };
+		B06FD0961F2F8B5200FB968F /* rightSlideNavigation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B06FD0901F2F8B5200FB968F /* rightSlideNavigation.gif */; };
+		B06FD0971F2F8B5200FB968F /* rightSlidePresentation.gif in Resources */ = {isa = PBXBuildFile; fileRef = B06FD0911F2F8B5200FB968F /* rightSlidePresentation.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,9 +36,9 @@
 
 /* Begin PBXFileReference section */
 		379E02F41C91C27470FC5D5F /* Pods_Animators_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animators_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4015E3334468C287C8827561 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		4D4E4F0E79DB3C89440271C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4F9E9EC4A3E310184167C440 /* .cocoadocs.yml */ = {isa = PBXFileReference; includeInIndex = 1; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
+		4015E3334468C287C8827561 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4D4E4F0E79DB3C89440271C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4F9E9EC4A3E310184167C440 /* .cocoadocs.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Animators_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animators_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,16 +49,23 @@
 		607FACE51AFB9204008FA782 /* Animators_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Animators_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6A4EA0F1A3174CB63A7D4D98 /* .travis.yml */ = {isa = PBXFileReference; includeInIndex = 1; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
-		803776F5D421AC401AEDD17B /* .gitignore */ = {isa = PBXFileReference; includeInIndex = 1; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
-		8826F67B3C504B66F4DD8058 /* Animators.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Animators.podspec; path = ../Animators.podspec; sourceTree = "<group>"; };
+		6A4EA0F1A3174CB63A7D4D98 /* .travis.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		803776F5D421AC401AEDD17B /* .gitignore */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		8826F67B3C504B66F4DD8058 /* Animators.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Animators.podspec; path = ../Animators.podspec; sourceTree = "<group>"; };
 		8A57EF199062A6288B6F40BC /* Pods_Animators_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animators_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F90086F7CE70ACC188CCDAA /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
-		8F9968CD498BEB424A437B53 /* podInstall.command */ = {isa = PBXFileReference; includeInIndex = 1; path = podInstall.command; sourceTree = "<group>"; };
-		8FDBAE17439E507B41FD9944 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
+		8F90086F7CE70ACC188CCDAA /* CHANGELOG.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		8F9968CD498BEB424A437B53 /* podInstall.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = podInstall.command; sourceTree = "<group>"; };
+		8FDBAE17439E507B41FD9944 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
+		B06FD0621F2F610300FB968F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B06FD08C1F2F8B5200FB968F /* bottomSlideNavigation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bottomSlideNavigation.gif; sourceTree = "<group>"; };
+		B06FD08D1F2F8B5200FB968F /* bottomSlidePresentation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bottomSlidePresentation.gif; sourceTree = "<group>"; };
+		B06FD08E1F2F8B5200FB968F /* fadeNavigation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fadeNavigation.gif; sourceTree = "<group>"; };
+		B06FD08F1F2F8B5200FB968F /* fadePresentation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fadePresentation.gif; sourceTree = "<group>"; };
+		B06FD0901F2F8B5200FB968F /* rightSlideNavigation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rightSlideNavigation.gif; sourceTree = "<group>"; };
+		B06FD0911F2F8B5200FB968F /* rightSlidePresentation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rightSlidePresentation.gif; sourceTree = "<group>"; };
 		B3CF7A2731073C9AF448836C /* Pods-Animators_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animators_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animators_Tests/Pods-Animators_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B3FE6FB912D570437AAD923A /* Pods-Animators_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animators_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animators_Example/Pods-Animators_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CB47F5914A9464E98C9675FA /* podPush.command */ = {isa = PBXFileReference; includeInIndex = 1; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
+		CB47F5914A9464E98C9675FA /* podPush.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
 		D7962B74FA6A5642BBFAA48B /* Pods-Animators_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animators_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animators_Tests/Pods-Animators_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E499C1296D0701480B1BB358 /* Pods-Animators_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animators_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animators_Example/Pods-Animators_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +132,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				B06FD0621F2F610300FB968F /* MainViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			name = "Example for Animators";
@@ -185,6 +200,12 @@
 		B06688E51F13EAB800A02878 /* _Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				B06FD08C1F2F8B5200FB968F /* bottomSlideNavigation.gif */,
+				B06FD08D1F2F8B5200FB968F /* bottomSlidePresentation.gif */,
+				B06FD08E1F2F8B5200FB968F /* fadeNavigation.gif */,
+				B06FD08F1F2F8B5200FB968F /* fadePresentation.gif */,
+				B06FD0901F2F8B5200FB968F /* rightSlideNavigation.gif */,
+				B06FD0911F2F8B5200FB968F /* rightSlidePresentation.gif */,
 			);
 			name = _Gifs;
 			sourceTree = "<group>";
@@ -278,9 +299,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06FD0951F2F8B5200FB968F /* fadePresentation.gif in Resources */,
+				B06FD0971F2F8B5200FB968F /* rightSlidePresentation.gif in Resources */,
+				B06FD0941F2F8B5200FB968F /* fadeNavigation.gif in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B06FD0961F2F8B5200FB968F /* rightSlideNavigation.gif in Resources */,
+				B06FD0931F2F8B5200FB968F /* bottomSlidePresentation.gif in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				B06FD0921F2F8B5200FB968F /* bottomSlideNavigation.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06FD0641F2F610300FB968F /* MainViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

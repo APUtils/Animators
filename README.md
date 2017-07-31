@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/Animators.svg?style=flat)](http://cocoapods.org/pods/Animators)
 [![Platform](https://img.shields.io/cocoapods/p/Animators.svg?style=flat)](http://cocoapods.org/pods/Animators)
 
-TODO
+Custom animators for presentation and navigation transitions. Super simple to use! Just call one of two configuration methods to setup navigation or presentation animations.
 
 ## Example
 
@@ -13,7 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## GIF animation
 
-TODO
+Bottom Slide:
+<img src="Example/Animators/bottomSlideNavigation.gif"/>
+<img src="Example/Animators/bottomSlidePresentation.gif"/>
+
+Fade:
+<img src="Example/Animators/fadeNavigation.gif"/>
+<img src="Example/Animators/fadePresentation.gif"/>
+
+Right Slide:
+<img src="Example/Animators/rightSlideNavigation.gif"/>
+<img src="Example/Animators/rightSlidePresentation.gif"/>
 
 ## Installation
 
@@ -28,7 +38,31 @@ pod 'Animators'
 
 ## Usage
 
-TODO
+To setup presentation animation call configuration before controller presentation, usually in `awakeFromNib()`. Like that:
+
+```swift
+override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    FadeAnimationDelegate.configurePresentationAnimations(viewController: self)
+}
+```
+
+To setup navigation animation call configuration before controller push. You could do it in root view controller `viewDidLoad()` method or just before push.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    RightSlideAnimationDelegate.configureNavigationAnimations(navigationController: navigationController!)
+}
+```
+
+```swift
+FadeAnimationDelegate.configureNavigationAnimations(navigationController: navigationController!)
+let vc = ViewController.create(type: .none)
+navigationController?.pushViewController(vc, animated: true)
+```
 
 See example and test projects for more details.
 

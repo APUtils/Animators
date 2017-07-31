@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uT9-W2-1nN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Wb3-VG-KnH">
+            <objects>
+                <navigationController id="uT9-W2-1nN" customClass="NavigationController" customModule="BaseClasses" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zjc-g2-R3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Izr-Ps-Upq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKf-PV-eWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="36"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="Animators_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -19,11 +36,101 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX7-FI-Nda">
+                                <rect key="frame" x="125" y="64" width="124" height="30"/>
+                                <state key="normal" title="Fade Presentation"/>
+                                <connections>
+                                    <action selector="onFadePresentationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9HU-5E-2Gk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvG-Re-X2q">
+                                <rect key="frame" x="97.5" y="102" width="179" height="30"/>
+                                <state key="normal" title="Bottom Slide Presentation"/>
+                                <connections>
+                                    <action selector="onBottomSlidePresentationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xoh-kR-YDO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDY-mM-lnN">
+                                <rect key="frame" x="105" y="140" width="164" height="30"/>
+                                <state key="normal" title="Right Slide Presentation"/>
+                                <connections>
+                                    <action selector="onRightSlidePresentationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kNU-rs-bDI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k1-Tn-nen">
+                                <rect key="frame" x="132" y="178" width="110" height="30"/>
+                                <state key="normal" title="Fade Navigation"/>
+                                <connections>
+                                    <action selector="onFadeNavigationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dGV-0D-rkP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJF-nZ-7OA">
+                                <rect key="frame" x="104.5" y="216" width="165" height="30"/>
+                                <state key="normal" title="Bottom Slide Navigation"/>
+                                <connections>
+                                    <action selector="onBottomSlideNavigationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cJh-tI-V5i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1S-Mj-BJU">
+                                <rect key="frame" x="111.5" y="254" width="151" height="30"/>
+                                <state key="normal" title="Right Slide Navigation"/>
+                                <connections>
+                                    <action selector="onRightSlideNavigationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hg4-PR-ZOo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MvG-Re-X2q" firstAttribute="top" secondItem="oX7-FI-Nda" secondAttribute="bottom" constant="8" id="2rB-3p-xVI"/>
+                            <constraint firstItem="oX7-FI-Nda" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3Oz-RX-Rxd"/>
+                            <constraint firstItem="7k1-Tn-nen" firstAttribute="top" secondItem="DDY-mM-lnN" secondAttribute="bottom" constant="8" id="3Zs-sh-kQm"/>
+                            <constraint firstItem="DDY-mM-lnN" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3zq-cz-34J"/>
+                            <constraint firstItem="mJF-nZ-7OA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="BuQ-Nm-vYy"/>
+                            <constraint firstItem="mJF-nZ-7OA" firstAttribute="top" secondItem="7k1-Tn-nen" secondAttribute="bottom" constant="8" id="MVd-0p-Rhp"/>
+                            <constraint firstItem="t1S-Mj-BJU" firstAttribute="top" secondItem="mJF-nZ-7OA" secondAttribute="bottom" constant="8" id="Mrz-d3-iIq"/>
+                            <constraint firstItem="oX7-FI-Nda" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Oi2-EZ-M0U"/>
+                            <constraint firstItem="7k1-Tn-nen" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="SgV-dj-f5f"/>
+                            <constraint firstItem="DDY-mM-lnN" firstAttribute="top" secondItem="MvG-Re-X2q" secondAttribute="bottom" constant="8" id="eY8-MD-Dk4"/>
+                            <constraint firstItem="MvG-Re-X2q" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="nS9-mX-AE3"/>
+                            <constraint firstItem="t1S-Mj-BJU" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="upP-WM-QgP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Lzl-YD-tlT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l0H-cb-SSM">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="L6V-6A-8VR" customClass="ViewController" customModule="Animators_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9w8-LC-AZM"/>
+                        <viewControllerLayoutGuide type="bottom" id="eIm-Sx-24I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MnM-8f-DY8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-7j-8bC">
+                                <rect key="frame" x="159.5" y="318" width="55" height="30"/>
+                                <state key="normal" title="Remove"/>
+                                <connections>
+                                    <action selector="removeViewControllerWithSender:" destination="L6V-6A-8VR" eventType="touchUpInside" id="tsK-yS-mhK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uI8-7j-8bC" firstAttribute="centerY" secondItem="MnM-8f-DY8" secondAttribute="centerY" id="KUy-rH-BY9"/>
+                            <constraint firstItem="uI8-7j-8bC" firstAttribute="centerX" secondItem="MnM-8f-DY8" secondAttribute="centerX" id="Old-mP-vVt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4o-mn-AmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="36"/>
         </scene>
     </scenes>
 </document>

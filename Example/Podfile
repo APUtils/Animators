@@ -7,6 +7,8 @@ use_frameworks!
 
 target 'Animators_Example' do
     pod 'Animators', :path => '../'
+    pod 'APExtensions'
+    pod 'BaseClasses'
 
     target 'Animators_Tests' do
         inherit! :search_paths
