@@ -14,14 +14,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## GIF animation
 
 Bottom Slide:
+
 <img src="Example/Animators/bottomSlideNavigation.gif"/>
 <img src="Example/Animators/bottomSlidePresentation.gif"/>
 
 Fade:
+
 <img src="Example/Animators/fadeNavigation.gif"/>
 <img src="Example/Animators/fadePresentation.gif"/>
 
 Right Slide:
+
 <img src="Example/Animators/rightSlideNavigation.gif"/>
 <img src="Example/Animators/rightSlidePresentation.gif"/>
 
@@ -48,7 +51,7 @@ override func awakeFromNib() {
 }
 ```
 
-To setup navigation animation call configuration before controller push. You could do it in root view controller `viewDidLoad()` method or just before push.
+To setup navigation animation call configuration before controller push. You could do it in **navigation controller's root view controller** `viewDidLoad()` method or just before push.
 
 ```swift
 override func viewDidLoad() {
