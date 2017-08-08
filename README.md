@@ -30,6 +30,16 @@ Right Slide:
 
 ## Installation
 
+#### Carthage
+
+Please check [official guide](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
+
+Cartfile:
+
+```
+github "APUtils/Animators"
+```
+
 #### CocoaPods
 
 Animators is available through [CocoaPods](http://cocoapods.org). To install
