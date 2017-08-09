@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Animators.svg?style=flat)](http://cocoapods.org/pods/Animators)
 [![License](https://img.shields.io/cocoapods/l/Animators.svg?style=flat)](http://cocoapods.org/pods/Animators)
 [![Platform](https://img.shields.io/cocoapods/p/Animators.svg?style=flat)](http://cocoapods.org/pods/Animators)
-[![CI Status](http://img.shields.io/travis/anton-plebanovich/Animators.svg?style=flat)](https://travis-ci.org/anton-plebanovich/Animators)
+[![CI Status](http://img.shields.io/travis/APUtils/Animators.svg?style=flat)](https://travis-ci.org/APUtils/Animators)
 
 Custom animators for presentation and navigation transitions. Super simple to use! Just call one of two configuration methods to setup navigation or presentation animations.
 
