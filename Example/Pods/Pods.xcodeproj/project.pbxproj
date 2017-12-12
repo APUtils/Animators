@@ -178,6 +178,7 @@
 		AE4DA49ECD693BF384CD824DF02D7C6E /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DE8B4D1624244893BEF78C4238DB0B /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AED58B976AB8F62FBFB0DA437861E088 /* PrettyDynamicTypeSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0DF66561F907A29504A82D0D052E9 /* PrettyDynamicTypeSyntax.swift */; };
 		AF1174085D9BC5D50FCE0480E9C2BE94 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88846DB597C2368677FC6E37437E220E /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		B0BBA4831FE015C800C387D8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBA4821FE015C800C387D8 /* Utils.swift */; };
 		B102ABE4E54B71B3D2C2118E2782FAB9 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A563F2DBC5B0C374C9A9319BADBFF58 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD19B5214DB21F867B1E94107B7FB761 /* QuartzCore.framework */; };
 		B2C151B20635A480E1937E3D2B509BB4 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = E190CBEE7A301E1AA91DC7072BBA6E13 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -509,6 +510,7 @@
 		AECB19BD8F475040D2134A32B57BBD81 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		AF1588FDE85C1BBE3CEEE899DEE3A74F /* CollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionView.swift; path = BaseClasses/Classes/CollectionView.swift; sourceTree = "<group>"; };
 		AF195DE76D33A28567751DE367043EC4 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
+		B0BBA4821FE015C800C387D8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B11FAA50FF32CD9211E4ED92CD86A9D5 /* String+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Utils.swift"; path = "APExtensions/Classes/Core/_Extensions/String+Utils.swift"; sourceTree = "<group>"; };
 		B1AC1C3767690FB4FE33B6DE249EE707 /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		B203C9CE897A4C346729EB704F706B27 /* MFMailComposeViewController+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MFMailComposeViewController+Utils.swift"; path = "APExtensions/Classes/Core/_Extensions/MFMailComposeViewController+Utils.swift"; sourceTree = "<group>"; };
@@ -997,6 +999,7 @@
 				94F201FF6EA61326D7E3186BC0FD7707 /* Fade Animation */,
 				48F57437742031F07D11110E4D303F99 /* Right Slide Animation */,
 				5B1A240BAE222F8BB7775B14ABC96DBF /* Support Files */,
+				B0BBA4811FE0156100C387D8 /* Utils */,
 			);
 			name = Animators;
 			path = ../..;
@@ -1059,6 +1062,15 @@
 				88A1EA8921FD6C48B66BBE93F955C6CD /* XCTest.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		B0BBA4811FE0156100C387D8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B0BBA4821FE015C800C387D8 /* Utils.swift */,
+			);
+			name = Utils;
+			path = Animators/Classes/Utils;
 			sourceTree = "<group>";
 		};
 		B1DFF2AF56349C0FDA8B1605203C8620 /* Products */ = {
@@ -1628,6 +1640,7 @@
 				4EE932BC138C9EACDA711113C85C2097 /* FadeAnimationDelegate.swift in Sources */,
 				F60A0C1FD35FB74507B4420170ACC76B /* FadeInAnimator.swift in Sources */,
 				006D7B0254C801699B02CD6E87A03A5B /* FadeOutAnimator.swift in Sources */,
+				B0BBA4831FE015C800C387D8 /* Utils.swift in Sources */,
 				39161F223B06F1B95F1480B36EB489E5 /* RightSlideAnimationDelegate.swift in Sources */,
 				5C4701E0E5481E1393C7DD2808CAFABA /* RightSlideInAnimator.swift in Sources */,
 				494E1BE326D2EB6F99E08B157A027FBA /* RightSlideOutAnimator.swift in Sources */,

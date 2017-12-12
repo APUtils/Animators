@@ -28,14 +28,12 @@ public final class BottomSlideAnimationDelegate: NSObject {
     
     /// Use this method to configure UINavigationController push/pop animations
     public static func configureNavigationAnimations(navigationController: UINavigationController) {
-        navigationController.delegate = sharedInstance
+        _g_configureNavigationAnimations(navigationController: navigationController, delegate: sharedInstance)
     }
     
     /// Use this method to configure UIViewController present/dismiss animations
     public static func configurePresentationAnimations(viewController: UIViewController) {
-        viewController.modalPresentationStyle = .custom
-        viewController.modalPresentationCapturesStatusBarAppearance = true
-        viewController.transitioningDelegate = sharedInstance
+        _g_configurePresentationAnimations(viewController: viewController, delegate: sharedInstance)
     }
     
     //-----------------------------------------------------------------------------
