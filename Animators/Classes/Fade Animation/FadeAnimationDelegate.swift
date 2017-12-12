@@ -42,8 +42,8 @@ public final class FadeAnimationDelegate: NSObject {
     // MARK: - Private properties
     //-----------------------------------------------------------------------------
     
-    final fileprivate var fadeInAnimator = FadeInAnimator()
-    final fileprivate var fadeOutAnimator = FadeOutAnimator()
+    final private var fadeInAnimator = FadeInAnimator()
+    final private var fadeOutAnimator = FadeOutAnimator()
 }
 
 //-----------------------------------------------------------------------------

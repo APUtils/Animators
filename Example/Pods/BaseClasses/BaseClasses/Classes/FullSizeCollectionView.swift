@@ -10,13 +10,13 @@ import UIKit
 
 
 /// Collection view that resizes it's cells to be the same size as collection view.
-class FullSizeCollectionView: CollectionView {
+open class FullSizeCollectionView: CollectionView {
     
     //-----------------------------------------------------------------------------
     // MARK: - UIView Properties
     //-----------------------------------------------------------------------------
     
-    override var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
+    override open var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
     
     //-----------------------------------------------------------------------------
     // MARK: - Private Properties
@@ -33,11 +33,20 @@ class FullSizeCollectionView: CollectionView {
     }
     
     private func configure(newSize: CGSize) {
-        guard previousSize != newSize, let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        var withoutInsetsSize = newSize
+        if #available(iOS 11.0, *) {
+            withoutInsetsSize.width -= adjustedContentInset.left + adjustedContentInset.right
+            withoutInsetsSize.height -= adjustedContentInset.top + adjustedContentInset.bottom
+        } else {
+            withoutInsetsSize.width -= contentInset.left + contentInset.right
+            withoutInsetsSize.height -= contentInset.top + contentInset.bottom
+        }
+        
+        guard previousSize != withoutInsetsSize, let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
         previousSize = newSize
         
-        flowLayout.itemSize = newSize
+        flowLayout.itemSize = withoutInsetsSize
         collectionViewLayout.invalidateLayout()
     }
     
@@ -45,7 +54,7 @@ class FullSizeCollectionView: CollectionView {
     // MARK: - UIView Methods
     //-----------------------------------------------------------------------------
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         setup()

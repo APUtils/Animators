@@ -42,8 +42,8 @@ public final class RightSlideAnimationDelegate: NSObject {
     // MARK: - Private Properties
     //-----------------------------------------------------------------------------
     
-    final fileprivate let rightSlideInAnimator = RightSlideInAnimator()
-    final fileprivate let rightSlideOutAnimator = RightSlideOutAnimator()
+    final private let rightSlideInAnimator = RightSlideInAnimator()
+    final private let rightSlideOutAnimator = RightSlideOutAnimator()
 }
 
 //-----------------------------------------------------------------------------

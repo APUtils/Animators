@@ -42,8 +42,8 @@ public final class BottomSlideAnimationDelegate: NSObject {
     // MARK: - Private properties
     //-----------------------------------------------------------------------------
     
-    final fileprivate var bottomSlideInAnimator = BottomSlideInAnimator()
-    final fileprivate var bottomSlideOutAnimator = BottomSlideOutAnimator()
+    final private var bottomSlideInAnimator = BottomSlideInAnimator()
+    final private var bottomSlideOutAnimator = BottomSlideOutAnimator()
 }
 
 //-----------------------------------------------------------------------------
