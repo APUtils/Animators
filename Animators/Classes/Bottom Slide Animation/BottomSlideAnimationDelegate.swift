@@ -31,7 +31,8 @@ public final class BottomSlideAnimationDelegate: NSObject {
         _g_configureNavigationAnimations(navigationController: navigationController, delegate: sharedInstance)
     }
     
-    /// Use this method to configure UIViewController present/dismiss animations
+    /// Use this method to configure UIViewController present/dismiss animations.
+    /// Configuration should occur before -viewDidLoad. Usually in -awakeFromNib.
     public static func configurePresentationAnimations(viewController: UIViewController) {
         _g_configurePresentationAnimations(viewController: viewController, delegate: sharedInstance)
     }

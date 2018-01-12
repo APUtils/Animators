@@ -1,9 +1,9 @@
 //
 //  Utils.swift
-//  Pods
+//  Animators
 //
 //  Created by Anton Plebanovich on 12/12/17.
-//  
+//  Copyright © 2017 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
