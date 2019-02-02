@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uT9-W2-1nN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uT9-W2-1nN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="uT9-W2-1nN" customClass="NavigationController" customModule="BaseClasses" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zjc-g2-R3g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -38,42 +38,42 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX7-FI-Nda">
-                                <rect key="frame" x="125" y="64" width="124" height="30"/>
+                                <rect key="frame" x="125.5" y="64" width="124" height="30"/>
                                 <state key="normal" title="Fade Presentation"/>
                                 <connections>
                                     <action selector="onFadePresentationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9HU-5E-2Gk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvG-Re-X2q">
-                                <rect key="frame" x="97.5" y="102" width="179" height="30"/>
+                                <rect key="frame" x="98" y="102" width="179" height="30"/>
                                 <state key="normal" title="Bottom Slide Presentation"/>
                                 <connections>
                                     <action selector="onBottomSlidePresentationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xoh-kR-YDO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDY-mM-lnN">
-                                <rect key="frame" x="105" y="140" width="164" height="30"/>
+                                <rect key="frame" x="105.5" y="140" width="164" height="30"/>
                                 <state key="normal" title="Right Slide Presentation"/>
                                 <connections>
                                     <action selector="onRightSlidePresentationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kNU-rs-bDI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k1-Tn-nen">
-                                <rect key="frame" x="132" y="178" width="110" height="30"/>
+                                <rect key="frame" x="132.5" y="178" width="110" height="30"/>
                                 <state key="normal" title="Fade Navigation"/>
                                 <connections>
                                     <action selector="onFadeNavigationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dGV-0D-rkP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJF-nZ-7OA">
-                                <rect key="frame" x="104.5" y="216" width="165" height="30"/>
+                                <rect key="frame" x="105" y="216" width="165" height="30"/>
                                 <state key="normal" title="Bottom Slide Navigation"/>
                                 <connections>
                                     <action selector="onBottomSlideNavigationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cJh-tI-V5i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1S-Mj-BJU">
-                                <rect key="frame" x="111.5" y="254" width="151" height="30"/>
+                                <rect key="frame" x="112" y="254" width="151" height="30"/>
                                 <state key="normal" title="Right Slide Navigation"/>
                                 <connections>
                                     <action selector="onRightSlideNavigationTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hg4-PR-ZOo"/>
@@ -114,10 +114,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-7j-8bC">
-                                <rect key="frame" x="159.5" y="318" width="55" height="30"/>
+                                <rect key="frame" x="160" y="318.5" width="55" height="30"/>
                                 <state key="normal" title="Remove"/>
                                 <connections>
-                                    <action selector="removeViewControllerWithSender:" destination="L6V-6A-8VR" eventType="touchUpInside" id="tsK-yS-mhK"/>
+                                    <action selector="removeWithSender:" destination="L6V-6A-8VR" eventType="touchUpInside" id="zuD-P4-PkA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4o-mn-AmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="36"/>
+            <point key="canvasLocation" x="-30" y="695"/>
         </scene>
     </scenes>
 </document>

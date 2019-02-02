@@ -11,7 +11,8 @@ import UIKit
 
 public final class RightSlideOutAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     public final func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.7
+        let isInteractive = transitionContext?.isInteractive ?? false
+        return isInteractive ? 0.2 : 0.7
     }
     
     public final func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -28,11 +29,29 @@ public final class RightSlideOutAnimator: NSObject, UIViewControllerAnimatedTran
             containerView.insertSubview(toView, at: 0)
         }
         
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.4, options: [.beginFromCurrentState], animations: {
+        let animations: () -> Void = {
             fromView.frame.origin.x += fromView.bounds.width
             toView.frame.origin.x += fromView.bounds.width
-        }, completion: { _ in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        })
+        }
+        
+        if transitionContext.isInteractive {
+            UIView.animate(withDuration: transitionDuration(using: transitionContext),
+                           delay: 0,
+                           options: [.curveLinear],
+                           animations: animations,
+                           completion: { finished in
+                            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+        } else {
+            UIView.animate(withDuration: transitionDuration(using: transitionContext),
+                           delay: 0,
+                           usingSpringWithDamping: 0.75,
+                           initialSpringVelocity: 0.4,
+                           options: [.beginFromCurrentState],
+                           animations: animations,
+                           completion: { _ in
+                            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+        }
     }
 }

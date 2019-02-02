@@ -12,6 +12,10 @@ import APExtensions
 
 
 final class ViewController: UIViewController {
+    
+    // ******************************* MARK: - Private Properties
+    
+    private var animationDelegate: RightSlideAnimationDelegate!
 
     //-----------------------------------------------------------------------------
     // MARK: - Enums
@@ -43,7 +47,7 @@ final class ViewController: UIViewController {
                 BottomSlideAnimationDelegate.configurePresentationAnimations(viewController: self)
                 
             case .rightSlidePresentation:
-                RightSlideAnimationDelegate.configurePresentationAnimations(viewController: self)
+                animationDelegate = RightSlideAnimationDelegate(viewController: self)
             }
         }
     }

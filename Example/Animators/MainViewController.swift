@@ -12,14 +12,16 @@ import Animators
 
 final class MainViewController: UIViewController {
     
+    // ******************************* MARK: - Private Properties
+    
+    private var animationDelegate: RightSlideAnimationDelegate!
+    
     //-----------------------------------------------------------------------------
     // MARK: - UIViewController Methods
     //-----------------------------------------------------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        RightSlideAnimationDelegate.configureNavigationAnimations(navigationController: navigationController!)
     }
     
     //-----------------------------------------------------------------------------
@@ -56,7 +58,7 @@ final class MainViewController: UIViewController {
     }
     
     @IBAction private func onRightSlideNavigationTap(_ sender: Any) {
-        RightSlideAnimationDelegate.configureNavigationAnimations(navigationController: navigationController!)
+        animationDelegate = RightSlideAnimationDelegate(navigationController: navigationController!)
         
         let vc = ViewController.create(type: .none)
         navigationController?.pushViewController(vc, animated: true)
