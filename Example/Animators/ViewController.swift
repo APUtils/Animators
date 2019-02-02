@@ -16,10 +16,8 @@ final class ViewController: UIViewController {
     // ******************************* MARK: - Private Properties
     
     private var animationDelegate: RightSlideAnimationDelegate!
-
-    //-----------------------------------------------------------------------------
-    // MARK: - Enums
-    //-----------------------------------------------------------------------------
+    
+    // ******************************* MARK: - Enums
     
     enum ViewControllerAnimationType {
         case none
@@ -28,9 +26,7 @@ final class ViewController: UIViewController {
         case rightSlidePresentation
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Properties
     
     private var type: ViewControllerAnimationType = .none {
         didSet {
@@ -56,9 +52,7 @@ final class ViewController: UIViewController {
         
         FadeAnimationDelegate.configurePresentationAnimations(viewController: self)
     }
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization, Setup and Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization, Setup and Configuration
     
     private static func create() -> ViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: className) as! ViewController
@@ -73,9 +67,7 @@ final class ViewController: UIViewController {
         return vc
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIViewController Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIViewController Methods
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

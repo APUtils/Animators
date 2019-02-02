@@ -16,15 +16,11 @@ import UIKit
 /// It fades underlaying view so check your window or navigation controller's view background color.
 public final class BottomSlideAnimationDelegate: NSObject {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Class Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Class Properties
     
     public static var sharedInstance = BottomSlideAnimationDelegate()
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Class Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Class Methods
     
     /// Use this method to configure UINavigationController push/pop animations
     public static func configureNavigationAnimations(navigationController: UINavigationController) {
@@ -37,17 +33,13 @@ public final class BottomSlideAnimationDelegate: NSObject {
         _g_configurePresentationAnimations(viewController: viewController, delegate: sharedInstance)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private properties
     
     final private var bottomSlideInAnimator = BottomSlideInAnimator()
     final private var bottomSlideOutAnimator = BottomSlideOutAnimator()
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UIViewControllerAnimatedTransitioning
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UIViewControllerAnimatedTransitioning
 
 extension BottomSlideAnimationDelegate: UIViewControllerTransitioningDelegate {
     public final func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -59,9 +51,7 @@ extension BottomSlideAnimationDelegate: UIViewControllerTransitioningDelegate {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UINavigationControllerDelegate
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UINavigationControllerDelegate
 
 extension BottomSlideAnimationDelegate: UINavigationControllerDelegate {
     public final func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

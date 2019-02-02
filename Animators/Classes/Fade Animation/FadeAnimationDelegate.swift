@@ -16,15 +16,11 @@ import UIKit
 /// Just simple fade in and fade out animation.
 public final class FadeAnimationDelegate: NSObject {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Class Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Class Properties
     
     public static var sharedInstance = FadeAnimationDelegate()
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Class Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Class Methods
     
     /// Use this method to configure UINavigationController push/pop animations
     public static func configureNavigationAnimations(navigationController: UINavigationController) {
@@ -37,17 +33,13 @@ public final class FadeAnimationDelegate: NSObject {
         _g_configurePresentationAnimations(viewController: viewController, delegate: sharedInstance)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private properties
     
     final private var fadeInAnimator = FadeInAnimator()
     final private var fadeOutAnimator = FadeOutAnimator()
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UIViewControllerAnimatedTransitioning
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UIViewControllerAnimatedTransitioning
 
 extension FadeAnimationDelegate: UIViewControllerTransitioningDelegate {
     public final func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -59,9 +51,7 @@ extension FadeAnimationDelegate: UIViewControllerTransitioningDelegate {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UINavigationControllerDelegate
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UINavigationControllerDelegate
 
 extension FadeAnimationDelegate: UINavigationControllerDelegate {
     public final func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

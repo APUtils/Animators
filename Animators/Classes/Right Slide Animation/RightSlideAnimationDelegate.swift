@@ -30,9 +30,11 @@ final public class RightSlideAnimationDelegate: NSObject {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Public Properties
+    
+    public var isInteractivePopGestureRecognizerEnabled: Bool = true
+    
+    // ******************************* MARK: - Private Properties
     
     private let mode: Mode
     private let rightSlideInAnimator = RightSlideInAnimator()
@@ -111,9 +113,7 @@ final public class RightSlideAnimationDelegate: NSObject {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UIViewControllerAnimatedTransitioning
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UIViewControllerAnimatedTransitioning
 
 extension RightSlideAnimationDelegate: UIViewControllerTransitioningDelegate {
     public final func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -133,9 +133,7 @@ extension RightSlideAnimationDelegate: UIViewControllerTransitioningDelegate {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UINavigationControllerDelegate
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UINavigationControllerDelegate
 
 extension RightSlideAnimationDelegate: UINavigationControllerDelegate {
     public final func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -153,6 +151,8 @@ extension RightSlideAnimationDelegate: UINavigationControllerDelegate {
 
 extension RightSlideAnimationDelegate: UIGestureRecognizerDelegate {
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        guard isInteractivePopGestureRecognizerEnabled else { return false }
+        
         let point = touch.location(in: mode.view)
         return point.x < 12
     }

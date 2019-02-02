@@ -16,17 +16,13 @@ final class MainViewController: UIViewController {
     
     private var animationDelegate: RightSlideAnimationDelegate!
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIViewController Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIViewController Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Methods - Actions
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Methods - Actions
     
     @IBAction private func onFadePresentationTap(_ sender: Any) {
         let vc = ViewController.create(type: .fadePresentation)
@@ -59,6 +55,7 @@ final class MainViewController: UIViewController {
     
     @IBAction private func onRightSlideNavigationTap(_ sender: Any) {
         animationDelegate = RightSlideAnimationDelegate(navigationController: navigationController!)
+        animationDelegate.isInteractivePopGestureRecognizerEnabled = false
         
         let vc = ViewController.create(type: .none)
         navigationController?.pushViewController(vc, animated: true)
