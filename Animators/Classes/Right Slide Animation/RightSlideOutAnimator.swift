@@ -32,6 +32,19 @@ public final class RightSlideOutAnimator: NSObject, UIViewControllerAnimatedTran
         let animations: () -> Void = {
             fromView.frame.origin.x += fromView.bounds.width
             toView.frame.origin.x += fromView.bounds.width
+            
+            // Keyboard behavior changed on iOS 13. It dismisses ignoring transition
+            // so need to fix that manually.
+            if #available(iOS 13.0, *) {
+                let keyboardWindow = UIApplication.shared.windows
+                    .first { String(describing: type(of: $0)) == "UIRemoteKeyboardWindow" }
+                
+                if let keyboardWindow = keyboardWindow, let keyboardImage = keyboardWindow.getImage() {
+                    let imageView = UIImageView(image: keyboardImage)
+                    keyboardWindow.addSubview(imageView)
+                    keyboardWindow.frame.origin.x += keyboardWindow.frame.width
+                }
+            }
         }
         
         if transitionContext.isInteractive {
@@ -52,21 +65,6 @@ public final class RightSlideOutAnimator: NSObject, UIViewControllerAnimatedTran
                            completion: { _ in
                             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             })
-        }
-        
-        // Keyboard behavior changed on iOS 13. It dismisses ignoring transition
-        // so need to fix that manually.
-        if #available(iOS 13.0, *) {
-            let keyboardWindow = UIApplication.shared.windows
-                .first { String(describing: type(of: $0)) == "UIRemoteKeyboardWindow" }
-            
-            if let keyboardWindow = keyboardWindow, let keyboardImage = keyboardWindow.getImage() {
-                let imageView = UIImageView(image: keyboardImage)
-                keyboardWindow.addSubview(imageView)
-                fromVc.transitionCoordinator?.animateAlongsideTransition(in: keyboardWindow, animation: { context in
-                    keyboardWindow.frame.origin.x += keyboardWindow.frame.width
-                }, completion: nil)
-            }
         }
     }
 }
