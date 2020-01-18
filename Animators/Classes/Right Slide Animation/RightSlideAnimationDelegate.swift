@@ -109,6 +109,8 @@ final public class RightSlideAnimationDelegate: NSObject {
             
         case .possible:
             break
+        @unknown default:
+            break
         }
     }
 }
@@ -141,6 +143,7 @@ extension RightSlideAnimationDelegate: UINavigationControllerDelegate {
         case .push: return rightSlideInAnimator
         case .pop: return rightSlideOutAnimator
         case .none: return nil
+        @unknown default: return nil
         }
     }
     

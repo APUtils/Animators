@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 9/20/17.
-//  Copyright © 2017 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ open class TextView: UITextView {
     
     // ******************************* MARK: - IBInspectable
     
-    @IBInspectable public var textSideInset: CGFloat = 0 {
+    @IBInspectable open var textSideInset: CGFloat = 0 {
         didSet {
             configureInsets()
         }

@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 7/14/17.
-//  Copyright © 2017 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -12,21 +12,34 @@ import UIKit
 /// Collection view that resizes it's cells to be the same size as collection view.
 open class FullSizeCollectionView: CollectionView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Properties
     
-    override open var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
+    override open var bounds: CGRect {
+        willSet {
+            guard bounds.size != newValue.size else { return }
+            configure(newSize: newValue.size)
+        }
+    }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    open override var contentInset: UIEdgeInsets {
+        didSet {
+            guard oldValue != contentInset else { return }
+            configure(newSize: bounds.size)
+        }
+    }
+    
+    @available(iOS 11.0, *)
+    @available(iOSApplicationExtension 11.0, *)
+    open override func adjustedContentInsetDidChange() {
+        super.adjustedContentInsetDidChange()
+        configure(newSize: bounds.size)
+    }
+    
+    // ******************************* MARK: - Private Properties
     
     private var previousSize: CGSize = .zero
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization, Setup and Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization, Setup and Configuration
     
     private func setup() {
         configure(newSize: bounds.size)
@@ -34,7 +47,7 @@ open class FullSizeCollectionView: CollectionView {
     
     private func configure(newSize: CGSize) {
         var withoutInsetsSize = newSize
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, iOSApplicationExtension 11.0, *) {
             withoutInsetsSize.width -= adjustedContentInset.left + adjustedContentInset.right
             withoutInsetsSize.height -= adjustedContentInset.top + adjustedContentInset.bottom
         } else {
@@ -44,15 +57,14 @@ open class FullSizeCollectionView: CollectionView {
         
         guard previousSize != withoutInsetsSize, let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
-        previousSize = newSize
+        previousSize = withoutInsetsSize
         
         flowLayout.itemSize = withoutInsetsSize
         collectionViewLayout.invalidateLayout()
+        layoutIfNeeded()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Methods
     
     override open func awakeFromNib() {
         super.awakeFromNib()

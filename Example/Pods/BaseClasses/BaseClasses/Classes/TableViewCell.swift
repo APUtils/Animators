@@ -3,14 +3,12 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 6/15/17.
-//  Copyright © 2017 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
 
-//-----------------------------------------------------------------------------
-// MARK: - Helper Extension
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - Helper Extension
 
 private extension UIView {
     var allSubviews: [UIView] {
@@ -22,23 +20,17 @@ private extension UIView {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - Class Implementation
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - Class Implementation
 
 /// TableViewCell with disabled views background color change and `reuseId` property.
 open class TableViewCell: UITableViewCell {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Public Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Public Properties
     
     /// Increases every time cell was reused. May be used to determine if async update should be performed in this cell.
-    final private(set) public var reuseId: UInt = 0
+    private(set) open var reuseId: UInt = 0
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UITableViewCell Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UITableViewCell Overrides
     
     open override func prepareForReuse() {
         super.prepareForReuse()
@@ -72,9 +64,7 @@ open class TableViewCell: UITableViewCell {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Methods
     
     private func changeReuseId() {
         reuseId = reuseId &+ 1

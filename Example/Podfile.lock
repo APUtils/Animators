@@ -1,49 +1,42 @@
 PODS:
   - Animators (3.0.0)
-  - APExtensions (5.0.0):
-    - APExtensions/Abstractions (= 5.0.0)
-    - APExtensions/Core (= 5.0.0)
-    - APExtensions/Storyboard (= 5.0.0)
-    - APExtensions/ViewConfiguration (= 5.0.0)
-    - APExtensions/ViewState (= 5.0.0)
-  - APExtensions/Abstractions (5.0.0)
-  - APExtensions/Core (5.0.0)
-  - APExtensions/Storyboard (5.0.0)
-  - APExtensions/ViewConfiguration (5.0.0)
-  - APExtensions/ViewState (5.0.0)
-  - BaseClasses (3.0.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - iOSSnapshotTestCase (2.2.0):
-    - iOSSnapshotTestCase/SwiftSupport (= 2.2.0)
-  - iOSSnapshotTestCase/Core (2.2.0)
-  - iOSSnapshotTestCase/SwiftSupport (2.2.0):
+  - APExtensions (7.0.1):
+    - APExtensions/Abstractions (= 7.0.1)
+    - APExtensions/Core (= 7.0.1)
+    - APExtensions/Storyboard (= 7.0.1)
+    - APExtensions/ViewConfiguration (= 7.0.1)
+    - APExtensions/ViewState (= 7.0.1)
+  - APExtensions/Abstractions (7.0.1)
+  - APExtensions/Core (7.0.1)
+  - APExtensions/Storyboard (7.0.1)
+  - APExtensions/ViewConfiguration (7.0.1)
+  - APExtensions/ViewState (7.0.1)
+  - BaseClasses (4.0.0)
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
     - iOSSnapshotTestCase/Core
-  - Nimble (7.3.1)
-  - Nimble-Snapshots (6.4.1):
-    - Nimble-Snapshots/Core (= 6.4.1)
-  - Nimble-Snapshots/Core (6.4.1):
-    - iOSSnapshotTestCase (~> 2.0)
-    - Nimble (~> 7.0)
-  - Quick (1.3.2)
+  - Nimble (8.0.5)
+  - Nimble-Snapshots (8.1.1):
+    - Nimble-Snapshots/Core (= 8.1.1)
+  - Nimble-Snapshots/Core (8.1.1):
+    - iOSSnapshotTestCase (~> 6.0)
+    - Nimble (~> 8.0)
+  - Quick (2.2.0)
 
 DEPENDENCIES:
   - Animators (from `../`)
   - APExtensions
   - BaseClasses
-  - FBSnapshotTestCase
   - Nimble
   - Nimble-Snapshots
   - Quick
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - APExtensions
     - BaseClasses
-    - FBSnapshotTestCase
     - iOSSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
@@ -54,15 +47,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Animators: 095becd5e514db242d4a58546bb4f6a33f48d65d
-  APExtensions: 4b5b4db5dd452194a5f1b6fdb0450a058ec59d28
-  BaseClasses: d5530ec19ac1c7a09eecff738d6c20a40ec9b47f
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  iOSSnapshotTestCase: 415bd84f9dbba4ff45fede49d800bc7332fbedac
-  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
-  Nimble-Snapshots: 438fb1a6fa3c655e246fc9ac375f6cd2964d759a
-  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
+  Animators: a181e2a4a3c11d2c3534c6d8578bcb85a2fd2ae2
+  APExtensions: 9a7a7b6ff5b9785b245962de89fbbdaf4c10f10e
+  BaseClasses: e75a0ee46c79256b63b6ca207b5918720e54d524
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
+  Nimble-Snapshots: 5058fb9b459e64371f54a0f8d9dde6f33db490a0
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
-PODFILE CHECKSUM: 1f36c8afc93431fb71312da0d86e5cafb9b064f7
+PODFILE CHECKSUM: 605dc19f107ee9b3e394bfca574f37ee21eb5d93
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

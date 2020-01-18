@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 29/05/16.
-//  Copyright © 2016 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -12,9 +12,7 @@ import UIKit
 /// TextField with `Done` default button and close keyboard when tap
 open class TextField: UITextField {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,9 +20,7 @@ open class TextField: UITextField {
         setup()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private methods
     
     private func setup() {
         returnKeyType = .done
@@ -32,9 +28,7 @@ open class TextField: UITextField {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UITextFieldDelegate
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UITextFieldDelegate
 
 extension TextField: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {

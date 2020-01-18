@@ -62,6 +62,8 @@ extension BottomSlideAnimationDelegate: UINavigationControllerDelegate {
             return bottomSlideOutAnimator
         case .none:
             return nil
+        @unknown default:
+            return nil
         }
     }
 }

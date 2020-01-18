@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 19.05.16.
-//  Copyright © 2016 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -13,9 +13,7 @@ import UIKit
 /// It also have activity indicator that always stays in center.
 open class CollectionView: UICollectionView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Properties
     
     open override var contentSize: CGSize {
         didSet {
@@ -25,12 +23,10 @@ open class CollectionView: UICollectionView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - @IBInspectable
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - @IBInspectable
     
     /// Text displayed in the middle of table view when it's content is empty
-    @IBInspectable public var emptyText: String? {
+    @IBInspectable open var emptyText: String? {
         didSet {
             emptyLabel.text = emptyText
             configure()
@@ -38,12 +34,10 @@ open class CollectionView: UICollectionView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Properties
     
     /// Label that displays `emptyText` string. You could configure it's params, but it's still better to set text using `emptyText` property.
-    private(set) public lazy var emptyLabel: UILabel = {
+    open lazy var emptyLabel: UILabel = {
         let emptyLabel = UILabel()
         emptyLabel.numberOfLines = 0
         emptyLabel.text = emptyText
@@ -52,15 +46,13 @@ open class CollectionView: UICollectionView {
     }()
     
     /// Activity indicator that always stays in center.
-    private(set) public lazy var activityIndicatorView: UIActivityIndicatorView = {
+    open lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView(style: .gray)
         
         return activityIndicatorView
     }()
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization and Setup
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization and Setup
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -79,9 +71,7 @@ open class CollectionView: UICollectionView {
         delaysContentTouches = false
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Configuration
     
     private func configure() {
         configureEmptyLabel()
@@ -91,9 +81,7 @@ open class CollectionView: UICollectionView {
         emptyLabel.isHidden = (contentSize.height <= 0 && contentSize.width <= 0) || emptyText == nil || emptyText?.isEmpty == true
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Overrides
     
     open override func layoutSubviews() {
         super.layoutSubviews()
@@ -116,9 +104,7 @@ open class CollectionView: UICollectionView {
         activityIndicatorView.center = CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIScrollView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIScrollView Methods
     
     override open func touchesShouldCancel(in view: UIView) -> Bool {
         if view is UIButton {
@@ -126,5 +112,13 @@ open class CollectionView: UICollectionView {
         }
         
         return super.touchesShouldCancel(in: view)
+    }
+}
+
+// ******************************* MARK: - CustomStringConvertible
+
+extension CollectionView {
+    open override var description: String {
+        return fixedDescription
     }
 }

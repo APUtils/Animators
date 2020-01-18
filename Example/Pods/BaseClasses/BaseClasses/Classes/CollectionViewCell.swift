@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 11/10/17.
-//  Copyright © 2017 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -12,16 +12,12 @@ import UIKit
 /// CollectionViewCell with `reuseId` property.
 open class CollectionViewCell: UICollectionViewCell {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Public Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Public Properties
     
     /// Increases every time cell was reused. May be used to determine if async update should be performed in this cell.
-    private(set) public var reuseId: UInt = 0
+    private(set) open var reuseId: UInt = 0
     
-    //-----------------------------------------------------------------------------
-    // MARK: - CollectionViewCell Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - CollectionViewCell Overrides
     
     open override func prepareForReuse() {
         super.prepareForReuse()
@@ -29,9 +25,7 @@ open class CollectionViewCell: UICollectionViewCell {
         changeReuseId()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Methods
     
     private func changeReuseId() {
         reuseId = reuseId &+ 1

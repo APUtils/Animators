@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 8/7/17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import UIKit
@@ -11,9 +11,7 @@ import UIKit
 
 open class NavigationBar: UINavigationBar {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Methods
     
     // Make navigation bar transparent for touches so user could scroll over it if it's translucent
     override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {

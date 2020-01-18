@@ -62,6 +62,8 @@ extension FadeAnimationDelegate: UINavigationControllerDelegate {
             return fadeOutAnimator
         case .none:
             return nil
+        @unknown default:
+            return nil
         }
     }
 }
